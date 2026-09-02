@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sreenandhu Jacy — Software Engineer</title>
+  <meta name="description" content="Portfolio of Sreenandhu Jacy, final-year CSE student and software developer from Kerala. Builds full-stack web platforms and cross-platform mobile apps.">
+  <meta name="keywords" content="Sreenandhu Jacy, software engineer, full-stack developer, React Native, Node.js, Kerala, SJCET">
+  <meta name="author" content="Sreenandhu Jacy">
+  <meta property="og:title" content="Sreenandhu Jacy — Software Engineer">
+  <meta property="og:description" content="Final-year CSE student building full-stack platforms and mobile apps.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="wrap header-inner">
+      <a href="#hero" class="logo" aria-label="Sreenandhu Jacy Home">
+        <span class="logo-bracket">&lt;</span>SJ<span class="logo-bracket">/&gt;</span>
+      </a>
+      <nav class="main-nav" id="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="Sreenandhu_Jacy.pdf" class="nav-resume" target="_blank" rel="noopener" id="nav-resume-btn">
+          <i class="fa-solid fa-file-arrow-down"></i> Resume
+        </a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-orbs" aria-hidden="true">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+    </div>
+    <div class="wrap hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge reveal-up" style="--delay:0s">
+          <span class="badge-dot"></span>
+          <span>Available for opportunities</span>
+        </div>
+        <h1 class="hero-name reveal-up" style="--delay:0.1s">
+          Hi, I'm <span class="gradient-text">Sreenandhu</span> Jacy
+        </h1>
+        <p class="hero-tagline reveal-up" style="--delay:0.2s">
+          Final-year CSE Student &amp; Software Developer
+        </p>
+        <p class="hero-desc reveal-up" style="--delay:0.3s">
+          I build full-stack web platforms and cross-platform mobile apps &mdash; from a campus community app 
+          connecting thousands of students, to an offline-first healthcare tool for frontline ASHA workers.
+        </p>
+        <div class="hero-actions reveal-up" style="--delay:0.4s">
+          <a href="#projects" class="btn btn-primary" id="hero-work-btn">
+            <span>View My Work</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="Sreenandhu_Jacy.pdf" class="btn btn-outline" target="_blank" rel="noopener" id="hero-resume-btn">
+            <i class="fa-solid fa-file-arrow-down"></i>
+            <span>Download Resume</span>
+          </a>
+        </div>
+        <div class="hero-socials reveal-up" style="--delay:0.5s">
+          <a href="https://github.com/Sreee444" target="_blank" rel="noopener" class="social-icon" id="social-github" aria-label="GitHub profile">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/sreenandhujacy" target="_blank" rel="noopener" class="social-icon" id="social-linkedin" aria-label="LinkedIn profile">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:sreenandhukj10@gmail.com" class="social-icon" id="social-email" aria-label="Send email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-card-wrap reveal-right" style="--delay:0.3s">
+        <div class="hero-stat-card glass-card" id="hero-stat-card">
+          <div class="stat-card-header">
+            <div class="stat-card-avatar">SJ</div>
+            <div class="stat-card-meta">
+              <strong>Sreenandhu Jacy</strong>
+              <span>Student &middot; Developer</span>
+            </div>
+          </div>
+          <div class="stat-row">
+            <i class="fa-solid fa-location-dot stat-icon"></i>
+            <span>Palai, Kottayam, Kerala</span>
+          </div>
+          <div class="stat-row">
+            <i class="fa-solid fa-graduation-cap stat-icon"></i>
+            <span>B.Tech CSE &middot; CGPA 8.48/10</span>
+          </div>
+          <div class="stat-row">
+            <i class="fa-solid fa-building-columns stat-icon"></i>
+            <span>SJCET, Palai &middot; Final Year</span>
+          </div>
+          <div class="stat-row">
+            <i class="fa-solid fa-trophy stat-icon accent"></i>
+            <span>Top 3 &mdash; Smart India Hackathon 2025</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-chips">
+            <span class="stat-chip">Full-Stack</span>
+            <span class="stat-chip">Mobile Dev</span>
+            <span class="stat-chip">Cybersecurity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="wrap about-wrap">
+      <div class="section-label reveal-up">About Me</div>
+      <h2 class="section-title reveal-up">Crafting solutions that <span class="gradient-text">actually matter</span></h2>
+      <div class="about-grid">
+        <div class="about-text-col reveal-up">
+          <p>
+            I'm a final-year Computer Science and Engineering student at St. Joseph's College of Engineering and Technology, Palai &mdash; passionate about building software that solves real problems.
+          </p>
+          <p>
+            Whether it's a <strong>campus platform</strong> giving students and faculty one place to organise events and mentorship, or a <strong>healthcare records app</strong> that keeps working even when the network doesn't &mdash; I care about impact as much as implementation.
+          </p>
+          <p>
+            My work spans React, React Native, Node.js and Supabase, with a strong foundation in Data Structures, OOP, DBMS and OS. I've also explored cybersecurity, competed in NASA Space Apps (twice!), and ranked Top 3 at Smart India Hackathon 2025.
+          </p>
+          <p>
+            Currently seeking a <strong>Software Engineer</strong> role where I can build impactful products and keep growing.
+          </p>
+        </div>
+        <div class="about-facts-col reveal-right">
+          <div class="about-fact-item">
+            <div class="fact-number">8.48</div>
+            <div class="fact-label">CGPA (Sem VI)</div>
+          </div>
+          <div class="about-fact-item">
+            <div class="fact-number">3+</div>
+            <div class="fact-label">Internships</div>
+          </div>
+          <div class="about-fact-item">
+            <div class="fact-number">6+</div>
+            <div class="fact-label">Projects</div>
+          </div>
+          <div class="about-fact-item">
+            <div class="fact-number">7</div>
+            <div class="fact-label">Certifications</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="wrap">
+      <div class="section-label reveal-up">Technical Skills</div>
+      <h2 class="section-title reveal-up">What I work with</h2>
+      <div class="skills-container">
+        <div class="skill-group reveal-up glass-card" style="--delay:0s">
+          <div class="skill-group-header">
+            <i class="fa-solid fa-code skill-group-icon"></i>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">SQL</span>
+          </div>
+        </div>
+        <div class="skill-group reveal-up glass-card" style="--delay:0.08s">
+          <div class="skill-group-header">
+            <i class="fa-solid fa-layer-group skill-group-icon"></i>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">React Native</span>
+            <span class="skill-tag">Expo</span>
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+          </div>
+        </div>
+        <div class="skill-group reveal-up glass-card" style="--delay:0.16s">
+          <div class="skill-group-header">
+            <i class="fa-solid fa-server skill-group-icon"></i>
+            <h3>Backend</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express.js</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">JWT Auth</span>
+            <span class="skill-tag">RBAC</span>
+          </div>
+        </div>
+        <div class="skill-group reveal-up glass-card" style="--delay:0.24s">
+          <div class="skill-group-header">
+            <i class="fa-solid fa-database skill-group-icon"></i>
+            <h3>Databases</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Supabase</span>
+            <span class="skill-tag">MongoDB Atlas</span>
+            <span class="skill-tag">PostgreSQL</span>
+          </div>
+        </div>
+        <div class="skill-group reveal-up glass-card" style="--delay:0.32s">
+          <div class="skill-group-header">
+            <i class="fa-solid fa-brain skill-group-icon"></i>
+            <h3>Core Concepts</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">DSA</span>
+            <span class="skill-tag">OOP</span>
+            <span class="skill-tag">DBMS</span>
+            <span class="skill-tag">OS</span>
+            <span class="skill-tag">Computer Networks</span>
+          </div>
+        </div>
+        <div class="skill-group reveal-up glass-card" style="--delay:0.4s">
+          <div class="skill-group-header">
+            <i class="fa-solid fa-screwdriver-wrench skill-group-icon"></i>
+            <h3>Tools</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Redux Toolkit</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="wrap">
+      <div class="section-label reveal-up">Work Experience</div>
+      <h2 class="section-title reveal-up">Internships &amp; Training</h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal-up" style="--delay:0s">
+          <div class="timeline-connector">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-top">
+              <div>
+                <h3 class="timeline-role">Cybersecurity Intern</h3>
+                <p class="timeline-org">&#956;Learn &middot; SJCET, Palai</p>
+              </div>
+              <div class="timeline-date-badge">Jun 2026</div>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Completed a one-month internship covering Linux, networking, web security and reconnaissance.</li>
+              <li>Performed hands-on security labs focused on vulnerability assessment and secure computing practices.</li>
+              <li>Analysed common security vulnerabilities and applied mitigation techniques through practical labs.</li>
+              <li>Strengthened analytical thinking and teamwork through collaborative cybersecurity challenges.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>Linux</span><span>Networking</span><span>Web Security</span><span>Recon</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" style="--delay:0.1s">
+          <div class="timeline-connector">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-top">
+              <div>
+                <h3 class="timeline-role">Python Intern</h3>
+                <p class="timeline-org">Soften Technologies</p>
+              </div>
+              <div class="timeline-date-badge">Jun 2025</div>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Developed Python programs using OOP, file handling, exception handling and modular programming.</li>
+              <li>Practiced debugging, algorithm implementation and structured software development.</li>
+              <li>Wrote clean, modular and reusable Python code following object-oriented programming principles.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>Python</span><span>OOP</span><span>Algorithms</span><span>Debugging</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" style="--delay:0.2s">
+          <div class="timeline-connector">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-top">
+              <div>
+                <h3 class="timeline-role">Software Development Intern</h3>
+                <p class="timeline-org">The Nexus Project</p>
+              </div>
+              <div class="timeline-date-badge">Jun 2025</div>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Participated in a project-based internship focused on collaborative application development.</li>
+              <li>Applied Git workflows, debugging strategies and engineering practices in team projects.</li>
+              <li>Collaborated to design, implement, test and document features following Agile-inspired practices.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>Git</span><span>Agile</span><span>Collaboration</span><span>Full-Stack</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="section-label reveal-up">Portfolio</div>
+      <h2 class="section-title reveal-up">Selected Work</h2>
+      <div class="projects-grid">
+
+        <article class="project-card project-featured glass-card reveal-up" style="--delay:0s" id="project-campus">
+          <div class="project-card-glow"></div>
+          <div class="project-top">
+            <div class="project-number">01</div>
+            <div class="project-links">
+              <a href="https://github.com/Sreee444/CampUs" target="_blank" rel="noopener" class="project-link-btn" id="campus-github" aria-label="CampUs GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-badge">Mini Project &middot; Full-Stack</div>
+          <h3 class="project-name">CampUs</h3>
+          <p class="project-desc">
+            A full-stack campus collaboration platform connecting students, faculty, alumni and administrators &mdash; unified feeds, event management, discussion forums, mentorship, real-time chat and <strong>AI-powered recommendations</strong>.
+          </p>
+          <div class="project-stack">
+            <span>React Native</span><span>Expo</span><span>TypeScript</span>
+            <span>Node.js</span><span>Express.js</span><span>Supabase</span>
+          </div>
+        </article>
+
+        <article class="project-card project-featured glass-card reveal-up" style="--delay:0.1s" id="project-ehr">
+          <div class="project-card-glow" style="--glow-color: hsl(160 80% 50% / 0.12)"></div>
+          <div class="project-top">
+            <div class="project-number">02</div>
+            <div class="project-links">
+              <a href="https://github.com/Sreee444/EHR-ASSIST" target="_blank" rel="noopener" class="project-link-btn" id="ehr-github" aria-label="EHR-ASSIST GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-badge ehr-badge">&#127942; Top 3 &middot; SIH 2025</div>
+          <h3 class="project-name">EHR-ASSIST</h3>
+          <p class="project-desc">
+            An offline-first healthcare platform for ASHA workers &mdash; JWT auth, role-based access, GPS-enabled patient tracking, centralised health records and <strong>offline sync with conflict resolution</strong> for low-connectivity environments.
+          </p>
+          <div class="project-stack">
+            <span>React Native</span><span>Expo</span><span>Redux Toolkit</span>
+            <span>Node.js</span><span>MongoDB Atlas</span><span>JWT</span>
+          </div>
+        </article>
+
+        <article class="project-card glass-card reveal-up" style="--delay:0.2s" id="project-recovera">
+          <div class="project-top">
+            <div class="project-number">03</div>
+            <div class="project-links">
+              <a href="https://github.com/Sreee444/Recovera" target="_blank" rel="noopener" class="project-link-btn" id="recovera-github" aria-label="Recovera GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-badge">Full-Stack Web</div>
+          <h3 class="project-name">Recovera</h3>
+          <p class="project-desc">
+            A full-stack lost-and-found platform &mdash; report and recover missing items with image uploads, Leaflet Maps integration, advanced search &amp; filtering, and real-time status updates.
+          </p>
+          <div class="project-stack">
+            <span>Node.js</span><span>Express.js</span><span>MongoDB</span>
+            <span>JavaScript</span><span>Tailwind CSS</span><span>JWT</span><span>Leaflet Maps</span>
+          </div>
+        </article>
+
+        <article class="project-card glass-card reveal-up" style="--delay:0.3s" id="project-biodiv">
+          <div class="project-top">
+            <div class="project-number">04</div>
+            <div class="project-links">
+              <a href="https://kerala-bio-diversity-platform.vercel.app" target="_blank" rel="noopener" class="project-link-btn" id="biodiv-live" aria-label="Kerala BioDiversity Platform live demo">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <a href="https://github.com/Sreee444/Kerala-BioDiversity-Platform" target="_blank" rel="noopener" class="project-link-btn" id="biodiv-github" aria-label="Kerala BioDiversity Platform GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-badge">React &middot; Open APIs</div>
+          <h3 class="project-name">Kerala BioDiversity Platform</h3>
+          <p class="project-desc">
+            A biodiversity discovery platform integrating PlantNet and iNaturalist APIs &mdash; searchable species discovery, comparison and favourites with reusable accessible React components.
+          </p>
+          <div class="project-stack">
+            <span>React</span><span>JavaScript</span><span>PlantNet API</span><span>iNaturalist API</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS & CERTIFICATIONS -->
+  <section class="section" id="achievements">
+    <div class="wrap">
+      <div class="section-label reveal-up">Recognition</div>
+      <h2 class="section-title reveal-up">Achievements &amp; Certifications</h2>
+      <div class="ach-certs-grid">
+
+        <div class="ach-col reveal-up">
+          <h3 class="ach-col-title"><i class="fa-solid fa-star"></i> Achievements</h3>
+          <div class="ach-list">
+            <div class="ach-item">
+              <div class="ach-icon-wrap gold"><i class="fa-solid fa-trophy"></i></div>
+              <div class="ach-text">
+                <strong>Top 3 &mdash; Smart India Hackathon 2025</strong>
+                <span>College Preliminary Round &middot; EHR-ASSIST Project</span>
+              </div>
+            </div>
+            <div class="ach-item">
+              <div class="ach-icon-wrap blue"><i class="fa-solid fa-rocket"></i></div>
+              <div class="ach-text">
+                <strong>NASA International Space Apps Challenge</strong>
+                <span>Participant &mdash; 2024 &amp; 2025</span>
+              </div>
+            </div>
+            <div class="ach-item">
+              <div class="ach-icon-wrap purple"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="ach-text">
+                <strong>Workshop &mdash; Securing the Cloud</strong>
+                <span>KETCON 2024</span>
+              </div>
+            </div>
+            <div class="ach-item">
+              <div class="ach-icon-wrap green"><i class="fa-solid fa-people-group"></i></div>
+              <div class="ach-text">
+                <strong>Volunteer &mdash; Root Access Coding Event</strong>
+                <span>ASTHRA 9.0 &middot; National Level Technical Festival</span>
+              </div>
+            </div>
+            <div class="ach-item">
+              <div class="ach-icon-wrap green"><i class="fa-solid fa-people-group"></i></div>
+              <div class="ach-text">
+                <strong>Volunteer &mdash; Decoration Team</strong>
+                <span>ASTHRA 10.0 &middot; National Level Technical Festival</span>
+              </div>
+            </div>
+            <div class="ach-item">
+              <div class="ach-icon-wrap orange"><i class="fa-solid fa-laptop-code"></i></div>
+              <div class="ach-text">
+                <strong>BODHI 2026 Source Code Event</strong>
+                <span>Technical Participant</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-col reveal-right">
+          <h3 class="ach-col-title"><i class="fa-solid fa-certificate"></i> Certifications</h3>
+          <div class="cert-list">
+            <div class="cert-item">
+              <div class="cert-issuer">Infosys Springboard</div>
+              <div class="cert-name">Data Structures and Algorithms</div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-issuer">Infosys Springboard</div>
+              <div class="cert-name">Java Programming Fundamentals</div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-issuer">Infosys Springboard</div>
+              <div class="cert-name">CompTIA IT Fundamentals: Operating Systems</div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-issuer">Cisco Networking Academy</div>
+              <div class="cert-name">Networking Basics</div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-issuer">IBM &middot; Coursera</div>
+              <div class="cert-name">Introduction to Mobile App Development</div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-issuer">Microsoft &middot; Coursera</div>
+              <div class="cert-name">Foundations of Coding: Full-Stack</div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-issuer">KodeKloud &middot; Coursera</div>
+              <div class="cert-name">Git Basics for DevOps</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <div class="wrap">
+      <div class="section-label reveal-up">Background</div>
+      <h2 class="section-title reveal-up">Education</h2>
+      <div class="edu-grid">
+        <div class="edu-card glass-card reveal-up" style="--delay:0s">
+          <div class="edu-icon"><i class="fa-solid fa-building-columns"></i></div>
+          <div class="edu-body">
+            <div class="edu-degree">B.Tech in Computer Science &amp; Engineering</div>
+            <div class="edu-school">St. Joseph's College of Engineering and Technology, Palai</div>
+            <div class="edu-year">2023 &ndash; Present</div>
+            <div class="edu-score">CGPA: <strong>8.48 / 10</strong> (Up to Semester VI)</div>
+          </div>
+        </div>
+        <div class="edu-card glass-card reveal-up" style="--delay:0.1s">
+          <div class="edu-icon"><i class="fa-solid fa-school"></i></div>
+          <div class="edu-body">
+            <div class="edu-degree">Higher Secondary Education</div>
+            <div class="edu-school">Holy Cross Higher Secondary School, Cherpunkal</div>
+            <div class="edu-year">2021 &ndash; 2023</div>
+            <div class="edu-score">Score: <strong>97.75%</strong></div>
+          </div>
+        </div>
+        <div class="edu-card glass-card reveal-up" style="--delay:0.2s">
+          <div class="edu-icon"><i class="fa-solid fa-book-open"></i></div>
+          <div class="edu-body">
+            <div class="edu-degree">Secondary School Education</div>
+            <div class="edu-school">Holy Cross Higher Secondary School, Cherpunkal</div>
+            <div class="edu-year">2020 &ndash; 2021</div>
+            <div class="edu-score">Score: <strong>100%</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="wrap contact-wrap">
+      <div class="section-label reveal-up">Get In Touch</div>
+      <h2 class="section-title reveal-up">Let's work together</h2>
+      <p class="contact-sub reveal-up">
+        I'm open to Software Engineer roles and exciting projects. Whether you want to talk about an opportunity, a collaboration, or just say hello &mdash; my inbox is always open.
+      </p>
+      <div class="contact-grid">
+        <div class="contact-info-col reveal-up">
+          <a href="mailto:sreenandhukj10@gmail.com" class="contact-card glass-card" id="contact-email">
+            <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-card-content">
+              <div class="contact-card-label">Email</div>
+              <div class="contact-card-value">sreenandhukj10@gmail.com</div>
+            </div>
+            <i class="fa-solid fa-arrow-right contact-arrow"></i>
+          </a>
+          <a href="tel:+918848113738" class="contact-card glass-card" id="contact-phone">
+            <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="contact-card-content">
+              <div class="contact-card-label">Phone</div>
+              <div class="contact-card-value">+91 88481 13738</div>
+            </div>
+            <i class="fa-solid fa-arrow-right contact-arrow"></i>
+          </a>
+          <a href="https://linkedin.com/in/sreenandhujacy" target="_blank" rel="noopener" class="contact-card glass-card" id="contact-linkedin">
+            <div class="contact-card-icon linkedin"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="contact-card-content">
+              <div class="contact-card-label">LinkedIn</div>
+              <div class="contact-card-value">linkedin.com/in/sreenandhujacy</div>
+            </div>
+            <i class="fa-solid fa-arrow-right contact-arrow"></i>
+          </a>
+          <a href="https://github.com/Sreee444" target="_blank" rel="noopener" class="contact-card glass-card" id="contact-github">
+            <div class="contact-card-icon"><i class="fa-brands fa-github"></i></div>
+            <div class="contact-card-content">
+              <div class="contact-card-label">GitHub</div>
+              <div class="contact-card-value">github.com/Sreee444</div>
+            </div>
+            <i class="fa-solid fa-arrow-right contact-arrow"></i>
+          </a>
+        </div>
+        <div class="contact-cta-col reveal-right">
+          <div class="contact-cta-card glass-card">
+            <div class="cta-emoji">&#128075;</div>
+            <h3>Available for opportunities</h3>
+            <p>I'm actively looking for Software Engineer roles where I can contribute to impactful products. Let's connect!</p>
+            <a href="mailto:sreenandhukj10@gmail.com" class="btn btn-primary full-width" id="contact-cta-btn">
+              <span>Say Hello</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </a>
+            <a href="Sreenandhu_Jacy.pdf" class="btn btn-outline full-width" target="_blank" rel="noopener" id="contact-resume-btn">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span>Download Resume</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span class="footer-logo">
+        <span class="logo-bracket">&lt;</span>SJ<span class="logo-bracket">/&gt;</span>
+      </span>
+      <p class="footer-copy">
+        Designed &amp; built by <strong>Sreenandhu Jacy</strong> &middot; <span id="year"></span>
+      </p>
+      <div class="footer-links">
+        <a href="https://github.com/Sreee444" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/sreenandhujacy" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:sreenandhukj10@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
