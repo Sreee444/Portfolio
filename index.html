@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sreenandhu Jacy — Software Engineer</title>
+  <title>Sreenandhu Jacy - Software Engineer</title>
   <meta name="description" content="Portfolio of Sreenandhu Jacy, final-year CSE student and software developer from Kerala. Builds full-stack web platforms and cross-platform mobile apps.">
   <meta name="keywords" content="Sreenandhu Jacy, software engineer, full-stack developer, React Native, Node.js, Kerala, SJCET">
   <meta name="author" content="Sreenandhu Jacy">
-  <meta property="og:title" content="Sreenandhu Jacy — Software Engineer">
+  <meta property="og:title" content="Sreenandhu Jacy - Software Engineer">
   <meta property="og:description" content="Final-year CSE student building full-stack platforms and mobile apps.">
   <meta property="og:type" content="website">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -33,18 +33,25 @@
   <header class="site-header" id="site-header">
     <div class="wrap header-inner">
       <a href="#hero" class="logo" aria-label="Sreenandhu Jacy Home">
-        <span class="logo-bracket">&lt;</span>SJ<span class="logo-bracket">/&gt;</span>
+        <span class="logo-score">SJ</span>
+        <span class="logo-dash">&middot;</span>
+        <span class="logo-sub">
+          <span class="logo-name">Sreenandhu</span>
+          <span class="logo-tagline">Full-Stack &middot; Mobile Dev</span>
+        </span>
       </a>
       <nav class="main-nav" id="main-nav" role="navigation" aria-label="Main navigation">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#achievements" class="nav-link">Achievements</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#about"      class="nav-link">About</a>
+        <a href="#skills"     class="nav-link">Skills</a>
+        <a href="#projects"   class="nav-link">Projects</a>
+        <a href="#contact"    class="nav-link">Contact</a>
         <a href="Sreenandhu_Jacy.pdf" class="nav-resume" target="_blank" rel="noopener" id="nav-resume-btn">
           <i class="fa-solid fa-file-arrow-down"></i> Resume
         </a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch color theme">
+          <i class="fa-solid fa-sun"></i>
+          <span>Light</span>
+        </button>
       </nav>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
         <span class="hamburger-line"></span>
@@ -56,28 +63,21 @@
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero-bg-orbs" aria-hidden="true">
-      <span class="orb orb-1"></span>
-      <span class="orb orb-2"></span>
-      <span class="orb orb-3"></span>
-    </div>
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-bg-fade" aria-hidden="true"></div>
     <div class="wrap hero-inner">
       <div class="hero-content">
-        <div class="hero-badge reveal-up" style="--delay:0s">
-          <span class="badge-dot"></span>
-          <span>Available for opportunities</span>
+        <div class="hero-kicker reveal-up" style="--delay:0s">
+          <span class="kicker-rule" aria-hidden="true"></span>
+          <span>Software Engineer &middot; Full-Stack + Mobile</span>
         </div>
         <h1 class="hero-name reveal-up" style="--delay:0.1s">
-          Hi, I'm <span class="gradient-text">Sreenandhu</span> Jacy
+          Sreenandhu Jacy
         </h1>
         <p class="hero-tagline reveal-up" style="--delay:0.2s">
-          Final-year CSE Student &amp; Software Developer
+          I build useful digital products for real people — from campus platforms to healthcare tools. Final-year CSE at SJCET, Palai.
         </p>
-        <p class="hero-desc reveal-up" style="--delay:0.3s">
-          I build full-stack web platforms and cross-platform mobile apps &mdash; from a campus community app 
-          connecting thousands of students, to an offline-first healthcare tool for frontline ASHA workers.
-        </p>
-        <div class="hero-actions reveal-up" style="--delay:0.4s">
+        <div class="hero-actions reveal-up" style="--delay:0.3s">
           <a href="#projects" class="btn btn-primary" id="hero-work-btn">
             <span>View My Work</span>
             <i class="fa-solid fa-arrow-right"></i>
@@ -87,7 +87,7 @@
             <span>Download Resume</span>
           </a>
         </div>
-        <div class="hero-socials reveal-up" style="--delay:0.5s">
+        <div class="hero-socials reveal-up" style="--delay:0.4s">
           <a href="https://github.com/Sreee444" target="_blank" rel="noopener" class="social-icon" id="social-github" aria-label="GitHub profile">
             <i class="fa-brands fa-github"></i>
           </a>
@@ -99,36 +99,50 @@
           </a>
         </div>
       </div>
-      <div class="hero-card-wrap reveal-right" style="--delay:0.3s">
-        <div class="hero-stat-card glass-card" id="hero-stat-card">
-          <div class="stat-card-header">
-            <div class="stat-card-avatar">SJ</div>
-            <div class="stat-card-meta">
-              <strong>Sreenandhu Jacy</strong>
-              <span>Student &middot; Developer</span>
+
+      <!-- Stat Card -->
+      <div class="hero-card-wrap reveal-right" style="--delay:0.2s">
+        <div class="hero-stat-card" id="hero-stat-card">
+          <div class="stat-card-header-bar">
+            <span class="stat-card-title">Player Card</span>
+            <span class="stat-chip">Available</span>
+          </div>
+          <div class="stat-card-body">
+            <div class="stat-card-name-big">Sreenandhu Jacy</div>
+            <div class="stat-card-sub">Software Engineer Candidate</div>
+
+            <div class="stat-divider"></div>
+
+            <div class="stat-row">
+              <span class="stat-row-label">Location</span>
+              <span class="stat-row-value">Palai, Kerala</span>
             </div>
-          </div>
-          <div class="stat-row">
-            <i class="fa-solid fa-location-dot stat-icon"></i>
-            <span>Palai, Kottayam, Kerala</span>
-          </div>
-          <div class="stat-row">
-            <i class="fa-solid fa-graduation-cap stat-icon"></i>
-            <span>B.Tech CSE &middot; CGPA 8.48/10</span>
-          </div>
-          <div class="stat-row">
-            <i class="fa-solid fa-building-columns stat-icon"></i>
-            <span>SJCET, Palai &middot; Final Year</span>
-          </div>
-          <div class="stat-row">
-            <i class="fa-solid fa-trophy stat-icon accent"></i>
-            <span>Top 3 &mdash; Smart India Hackathon 2025</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-chips">
-            <span class="stat-chip">Full-Stack</span>
-            <span class="stat-chip">Mobile Dev</span>
-            <span class="stat-chip">Cybersecurity</span>
+            <div class="stat-row">
+              <span class="stat-row-label">Degree</span>
+              <span class="stat-row-value">B.Tech CSE</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-row-label">CGPA</span>
+              <span class="stat-row-value gold">8.48 / 10</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-row-label">Projects</span>
+              <span class="stat-row-value">6+</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-row-label">Internships</span>
+              <span class="stat-row-value">3+</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-row-label">Achievement</span>
+              <span class="stat-row-value red">&#127942; Top 3 &middot; SIH 2025</span>
+            </div>
+
+            <div class="stat-chips">
+              <span class="stat-chip">Full-Stack</span>
+              <span class="stat-chip">Mobile Dev</span>
+              <span class="stat-chip">Cybersec</span>
+            </div>
           </div>
         </div>
       </div>
@@ -141,39 +155,42 @@
   <!-- ABOUT -->
   <section class="section" id="about">
     <div class="wrap about-wrap">
-      <div class="section-label reveal-up">About Me</div>
-      <h2 class="section-title reveal-up">Crafting solutions that <span class="gradient-text">actually matter</span></h2>
+      <div class="section-label reveal-up">Profile</div>
+      <h2 class="section-title reveal-up">A developer with<br>proof, not just potential.</h2>
       <div class="about-grid">
         <div class="about-text-col reveal-up">
           <p>
-            I'm a final-year Computer Science and Engineering student at St. Joseph's College of Engineering and Technology, Palai &mdash; passionate about building software that solves real problems.
+            I am a final-year Computer Science and Engineering student at St. Joseph's College of Engineering and Technology, Palai, building toward a software engineering role with a product-first mindset.
           </p>
           <p>
-            Whether it's a <strong>campus platform</strong> giving students and faculty one place to organise events and mentorship, or a <strong>healthcare records app</strong> that keeps working even when the network doesn't &mdash; I care about impact as much as implementation.
+            My strongest work sits where software has to survive real usage: <strong>CampUs</strong> brings students, faculty, alumni, events, mentorship, forums, chat, and recommendations into one campus platform; <strong>EHR-ASSIST</strong> supports ASHA workers with offline-first records, GPS-enabled tracking, authentication, access control, and sync conflict handling.
           </p>
           <p>
-            My work spans React, React Native, Node.js and Supabase, with a strong foundation in Data Structures, OOP, DBMS and OS. I've also explored cybersecurity, competed in NASA Space Apps (twice!), and ranked Top 3 at Smart India Hackathon 2025.
+            I work mainly with React, React Native, Expo, Node.js, Express, Supabase, MongoDB, and PostgreSQL. Under that stack, I keep strengthening the fundamentals: data structures, OOP, DBMS, operating systems, computer networks, and secure development habits.
           </p>
           <p>
-            Currently seeking a <strong>Software Engineer</strong> role where I can build impactful products and keep growing.
+            What makes me different is not a long list of tools. It is the pattern: I choose problems with context, design for constraints, ship working flows, and keep learning until the product feels usable.
           </p>
         </div>
         <div class="about-facts-col reveal-right">
+          <div class="about-facts-header">
+            <span class="about-facts-header-text">Stats</span>
+          </div>
           <div class="about-fact-item">
             <div class="fact-number">8.48</div>
-            <div class="fact-label">CGPA (Sem VI)</div>
+            <div class="fact-label">CGPA<br>(Sem VI)</div>
           </div>
           <div class="about-fact-item">
             <div class="fact-number">3+</div>
-            <div class="fact-label">Internships</div>
+            <div class="fact-label">Intern-<br>ships</div>
           </div>
           <div class="about-fact-item">
             <div class="fact-number">6+</div>
-            <div class="fact-label">Projects</div>
+            <div class="fact-label">Pro-<br>jects</div>
           </div>
           <div class="about-fact-item">
             <div class="fact-number">7</div>
-            <div class="fact-label">Certifications</div>
+            <div class="fact-label">Certifi-<br>cations</div>
           </div>
         </div>
       </div>
@@ -186,7 +203,7 @@
       <div class="section-label reveal-up">Technical Skills</div>
       <h2 class="section-title reveal-up">What I work with</h2>
       <div class="skills-container">
-        <div class="skill-group reveal-up glass-card" style="--delay:0s">
+        <div class="skill-group reveal-up" style="--delay:0s">
           <div class="skill-group-header">
             <i class="fa-solid fa-code skill-group-icon"></i>
             <h3>Languages</h3>
@@ -200,7 +217,7 @@
             <span class="skill-tag">SQL</span>
           </div>
         </div>
-        <div class="skill-group reveal-up glass-card" style="--delay:0.08s">
+        <div class="skill-group reveal-up" style="--delay:0.08s">
           <div class="skill-group-header">
             <i class="fa-solid fa-layer-group skill-group-icon"></i>
             <h3>Frontend</h3>
@@ -213,7 +230,7 @@
             <span class="skill-tag">CSS3</span>
           </div>
         </div>
-        <div class="skill-group reveal-up glass-card" style="--delay:0.16s">
+        <div class="skill-group reveal-up" style="--delay:0.16s">
           <div class="skill-group-header">
             <i class="fa-solid fa-server skill-group-icon"></i>
             <h3>Backend</h3>
@@ -226,7 +243,7 @@
             <span class="skill-tag">RBAC</span>
           </div>
         </div>
-        <div class="skill-group reveal-up glass-card" style="--delay:0.24s">
+        <div class="skill-group reveal-up" style="--delay:0.24s">
           <div class="skill-group-header">
             <i class="fa-solid fa-database skill-group-icon"></i>
             <h3>Databases</h3>
@@ -237,7 +254,7 @@
             <span class="skill-tag">PostgreSQL</span>
           </div>
         </div>
-        <div class="skill-group reveal-up glass-card" style="--delay:0.32s">
+        <div class="skill-group reveal-up" style="--delay:0.32s">
           <div class="skill-group-header">
             <i class="fa-solid fa-brain skill-group-icon"></i>
             <h3>Core Concepts</h3>
@@ -247,10 +264,10 @@
             <span class="skill-tag">OOP</span>
             <span class="skill-tag">DBMS</span>
             <span class="skill-tag">OS</span>
-            <span class="skill-tag">Computer Networks</span>
+            <span class="skill-tag">Networks</span>
           </div>
         </div>
-        <div class="skill-group reveal-up glass-card" style="--delay:0.4s">
+        <div class="skill-group reveal-up" style="--delay:0.4s">
           <div class="skill-group-header">
             <i class="fa-solid fa-screwdriver-wrench skill-group-icon"></i>
             <h3>Tools</h3>
@@ -278,7 +295,7 @@
             <div class="timeline-dot"></div>
             <div class="timeline-line"></div>
           </div>
-          <div class="timeline-content glass-card">
+          <div class="timeline-content">
             <div class="timeline-top">
               <div>
                 <h3 class="timeline-role">Cybersecurity Intern</h3>
@@ -303,7 +320,7 @@
             <div class="timeline-dot"></div>
             <div class="timeline-line"></div>
           </div>
-          <div class="timeline-content glass-card">
+          <div class="timeline-content">
             <div class="timeline-top">
               <div>
                 <h3 class="timeline-role">Python Intern</h3>
@@ -326,7 +343,7 @@
           <div class="timeline-connector">
             <div class="timeline-dot"></div>
           </div>
-          <div class="timeline-content glass-card">
+          <div class="timeline-content">
             <div class="timeline-top">
               <div>
                 <h3 class="timeline-role">Software Development Intern</h3>
@@ -356,8 +373,7 @@
       <h2 class="section-title reveal-up">Selected Work</h2>
       <div class="projects-grid">
 
-        <article class="project-card project-featured glass-card reveal-up" style="--delay:0s" id="project-campus">
-          <div class="project-card-glow"></div>
+        <article class="project-card project-featured reveal-up" style="--delay:0s" id="project-campus">
           <div class="project-top">
             <div class="project-number">01</div>
             <div class="project-links">
@@ -366,19 +382,20 @@
               </a>
             </div>
           </div>
-          <div class="project-badge">Mini Project &middot; Full-Stack</div>
-          <h3 class="project-name">CampUs</h3>
-          <p class="project-desc">
-            A full-stack campus collaboration platform connecting students, faculty, alumni and administrators &mdash; unified feeds, event management, discussion forums, mentorship, real-time chat and <strong>AI-powered recommendations</strong>.
-          </p>
-          <div class="project-stack">
-            <span>React Native</span><span>Expo</span><span>TypeScript</span>
-            <span>Node.js</span><span>Express.js</span><span>Supabase</span>
+          <div class="project-card-body">
+            <div class="project-badge">Mini Project &middot; Full-Stack</div>
+            <h3 class="project-name">CampUs</h3>
+            <p class="project-desc">
+              A full-stack campus collaboration platform connecting students, faculty, alumni and administrators &mdash; unified feeds, event management, discussion forums, mentorship, real-time chat and <strong>AI-powered recommendations</strong>.
+            </p>
+            <div class="project-stack">
+              <span>React Native</span><span>Expo</span><span>TypeScript</span>
+              <span>Node.js</span><span>Express.js</span><span>Supabase</span>
+            </div>
           </div>
         </article>
 
-        <article class="project-card project-featured glass-card reveal-up" style="--delay:0.1s" id="project-ehr">
-          <div class="project-card-glow" style="--glow-color: hsl(160 80% 50% / 0.12)"></div>
+        <article class="project-card project-featured reveal-up" style="--delay:0.1s" id="project-ehr">
           <div class="project-top">
             <div class="project-number">02</div>
             <div class="project-links">
@@ -387,18 +404,20 @@
               </a>
             </div>
           </div>
-          <div class="project-badge ehr-badge">&#127942; Top 3 &middot; SIH 2025</div>
-          <h3 class="project-name">EHR-ASSIST</h3>
-          <p class="project-desc">
-            An offline-first healthcare platform for ASHA workers &mdash; JWT auth, role-based access, GPS-enabled patient tracking, centralised health records and <strong>offline sync with conflict resolution</strong> for low-connectivity environments.
-          </p>
-          <div class="project-stack">
-            <span>React Native</span><span>Expo</span><span>Redux Toolkit</span>
-            <span>Node.js</span><span>MongoDB Atlas</span><span>JWT</span>
+          <div class="project-card-body">
+            <div class="project-badge ehr-badge">&#127942; Top 3 &middot; SIH 2025</div>
+            <h3 class="project-name">EHR-ASSIST</h3>
+            <p class="project-desc">
+              An offline-first healthcare platform for ASHA workers &mdash; JWT auth, role-based access, GPS-enabled patient tracking, centralised health records and <strong>offline sync with conflict resolution</strong> for low-connectivity environments.
+            </p>
+            <div class="project-stack">
+              <span>React Native</span><span>Expo</span><span>Redux Toolkit</span>
+              <span>Node.js</span><span>MongoDB Atlas</span><span>JWT</span>
+            </div>
           </div>
         </article>
 
-        <article class="project-card glass-card reveal-up" style="--delay:0.2s" id="project-recovera">
+        <article class="project-card reveal-up" style="--delay:0.2s" id="project-recovera">
           <div class="project-top">
             <div class="project-number">03</div>
             <div class="project-links">
@@ -407,18 +426,20 @@
               </a>
             </div>
           </div>
-          <div class="project-badge">Full-Stack Web</div>
-          <h3 class="project-name">Recovera</h3>
-          <p class="project-desc">
-            A full-stack lost-and-found platform &mdash; report and recover missing items with image uploads, Leaflet Maps integration, advanced search &amp; filtering, and real-time status updates.
-          </p>
-          <div class="project-stack">
-            <span>Node.js</span><span>Express.js</span><span>MongoDB</span>
-            <span>JavaScript</span><span>Tailwind CSS</span><span>JWT</span><span>Leaflet Maps</span>
+          <div class="project-card-body">
+            <div class="project-badge">Full-Stack Web</div>
+            <h3 class="project-name">Recovera</h3>
+            <p class="project-desc">
+              A full-stack lost-and-found platform &mdash; report and recover missing items with image uploads, Leaflet Maps integration, advanced search &amp; filtering, and real-time status updates.
+            </p>
+            <div class="project-stack">
+              <span>Node.js</span><span>Express.js</span><span>MongoDB</span>
+              <span>JavaScript</span><span>Tailwind CSS</span><span>JWT</span><span>Leaflet Maps</span>
+            </div>
           </div>
         </article>
 
-        <article class="project-card glass-card reveal-up" style="--delay:0.3s" id="project-biodiv">
+        <article class="project-card reveal-up" style="--delay:0.3s" id="project-biodiv">
           <div class="project-top">
             <div class="project-number">04</div>
             <div class="project-links">
@@ -430,13 +451,15 @@
               </a>
             </div>
           </div>
-          <div class="project-badge">React &middot; Open APIs</div>
-          <h3 class="project-name">Kerala BioDiversity Platform</h3>
-          <p class="project-desc">
-            A biodiversity discovery platform integrating PlantNet and iNaturalist APIs &mdash; searchable species discovery, comparison and favourites with reusable accessible React components.
-          </p>
-          <div class="project-stack">
-            <span>React</span><span>JavaScript</span><span>PlantNet API</span><span>iNaturalist API</span>
+          <div class="project-card-body">
+            <div class="project-badge">React &middot; Open APIs</div>
+            <h3 class="project-name">Kerala BioDiversity Platform</h3>
+            <p class="project-desc">
+              A biodiversity discovery platform integrating PlantNet and iNaturalist APIs &mdash; searchable species discovery, comparison and favourites with reusable accessible React components.
+            </p>
+            <div class="project-stack">
+              <span>React</span><span>JavaScript</span><span>PlantNet API</span><span>iNaturalist API</span>
+            </div>
           </div>
         </article>
 
@@ -543,16 +566,16 @@
       <div class="section-label reveal-up">Background</div>
       <h2 class="section-title reveal-up">Education</h2>
       <div class="edu-grid">
-        <div class="edu-card glass-card reveal-up" style="--delay:0s">
+        <div class="edu-card reveal-up" style="--delay:0s">
           <div class="edu-icon"><i class="fa-solid fa-building-columns"></i></div>
           <div class="edu-body">
             <div class="edu-degree">B.Tech in Computer Science &amp; Engineering</div>
             <div class="edu-school">St. Joseph's College of Engineering and Technology, Palai</div>
             <div class="edu-year">2023 &ndash; Present</div>
-            <div class="edu-score">CGPA: <strong>8.48 / 10</strong> (Up to Semester VI)</div>
+            <div class="edu-score">CGPA: <strong>8.48 / 10</strong> (Up to Sem VI)</div>
           </div>
         </div>
-        <div class="edu-card glass-card reveal-up" style="--delay:0.1s">
+        <div class="edu-card reveal-up" style="--delay:0.1s">
           <div class="edu-icon"><i class="fa-solid fa-school"></i></div>
           <div class="edu-body">
             <div class="edu-degree">Higher Secondary Education</div>
@@ -561,7 +584,7 @@
             <div class="edu-score">Score: <strong>97.75%</strong></div>
           </div>
         </div>
-        <div class="edu-card glass-card reveal-up" style="--delay:0.2s">
+        <div class="edu-card reveal-up" style="--delay:0.2s">
           <div class="edu-icon"><i class="fa-solid fa-book-open"></i></div>
           <div class="edu-body">
             <div class="edu-degree">Secondary School Education</div>
@@ -578,13 +601,13 @@
   <section class="section" id="contact">
     <div class="wrap contact-wrap">
       <div class="section-label reveal-up">Get In Touch</div>
-      <h2 class="section-title reveal-up">Let's work together</h2>
+      <h2 class="section-title reveal-up">Let's build something useful.</h2>
       <p class="contact-sub reveal-up">
-        I'm open to Software Engineer roles and exciting projects. Whether you want to talk about an opportunity, a collaboration, or just say hello &mdash; my inbox is always open.
+        I am open to Software Engineer roles, internships, and product teams where I can contribute across mobile, web, backend, and real user workflows.
       </p>
       <div class="contact-grid">
         <div class="contact-info-col reveal-up">
-          <a href="mailto:sreenandhukj10@gmail.com" class="contact-card glass-card" id="contact-email">
+          <a href="mailto:sreenandhukj10@gmail.com" class="contact-card" id="contact-email">
             <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
             <div class="contact-card-content">
               <div class="contact-card-label">Email</div>
@@ -592,7 +615,7 @@
             </div>
             <i class="fa-solid fa-arrow-right contact-arrow"></i>
           </a>
-          <a href="tel:+918848113738" class="contact-card glass-card" id="contact-phone">
+          <a href="tel:+918848113738" class="contact-card" id="contact-phone">
             <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
             <div class="contact-card-content">
               <div class="contact-card-label">Phone</div>
@@ -600,7 +623,7 @@
             </div>
             <i class="fa-solid fa-arrow-right contact-arrow"></i>
           </a>
-          <a href="https://linkedin.com/in/sreenandhujacy" target="_blank" rel="noopener" class="contact-card glass-card" id="contact-linkedin">
+          <a href="https://linkedin.com/in/sreenandhujacy" target="_blank" rel="noopener" class="contact-card" id="contact-linkedin">
             <div class="contact-card-icon linkedin"><i class="fa-brands fa-linkedin-in"></i></div>
             <div class="contact-card-content">
               <div class="contact-card-label">LinkedIn</div>
@@ -608,7 +631,7 @@
             </div>
             <i class="fa-solid fa-arrow-right contact-arrow"></i>
           </a>
-          <a href="https://github.com/Sreee444" target="_blank" rel="noopener" class="contact-card glass-card" id="contact-github">
+          <a href="https://github.com/Sreee444" target="_blank" rel="noopener" class="contact-card" id="contact-github">
             <div class="contact-card-icon"><i class="fa-brands fa-github"></i></div>
             <div class="contact-card-content">
               <div class="contact-card-label">GitHub</div>
@@ -618,18 +641,20 @@
           </a>
         </div>
         <div class="contact-cta-col reveal-right">
-          <div class="contact-cta-card glass-card">
-            <div class="cta-emoji">&#128075;</div>
+          <div class="contact-cta-card">
+            <div class="cta-emoji"><i class="fa-solid fa-paper-plane"></i></div>
             <h3>Available for opportunities</h3>
-            <p>I'm actively looking for Software Engineer roles where I can contribute to impactful products. Let's connect!</p>
-            <a href="mailto:sreenandhukj10@gmail.com" class="btn btn-primary full-width" id="contact-cta-btn">
-              <span>Say Hello</span>
-              <i class="fa-solid fa-paper-plane"></i>
-            </a>
-            <a href="Sreenandhu_Jacy.pdf" class="btn btn-outline full-width" target="_blank" rel="noopener" id="contact-resume-btn">
-              <i class="fa-solid fa-file-arrow-down"></i>
-              <span>Download Resume</span>
-            </a>
+            <p>Best fit: teams building apps with practical constraints, clear users, and room for a developer who can learn fast and execute carefully.</p>
+            <div class="cta-btn-stack">
+              <a href="mailto:sreenandhukj10@gmail.com" class="btn btn-primary full-width" id="contact-cta-btn">
+                <span>Say Hello</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </a>
+              <a href="Sreenandhu_Jacy.pdf" class="btn btn-outline full-width" target="_blank" rel="noopener" id="contact-resume-btn">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                <span>Download Resume</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -639,9 +664,7 @@
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <span class="footer-logo">
-        <span class="logo-bracket">&lt;</span>SJ<span class="logo-bracket">/&gt;</span>
-      </span>
+      <span class="footer-logo">SJ</span>
       <p class="footer-copy">
         Designed &amp; built by <strong>Sreenandhu Jacy</strong> &middot; <span id="year"></span>
       </p>

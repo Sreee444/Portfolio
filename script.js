@@ -12,6 +12,32 @@
 
 'use strict';
 
+// ===== THEME TOGGLE =====
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = themeToggle?.querySelector('i');
+const themeLabel = themeToggle?.querySelector('span');
+const storedTheme = localStorage.getItem('portfolio-theme');
+const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+
+function applyTheme(theme) {
+  document.body.dataset.theme = theme;
+  localStorage.setItem('portfolio-theme', theme);
+
+  if (!themeToggle || !themeIcon || !themeLabel) return;
+
+  const isLight = theme === 'light';
+  themeIcon.className = isLight ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+  themeLabel.textContent = isLight ? 'Dark' : 'Light';
+  themeToggle.setAttribute('aria-label', `Switch to ${isLight ? 'dark' : 'light'} theme`);
+}
+
+applyTheme(storedTheme || (systemPrefersLight ? 'light' : 'dark'));
+
+themeToggle?.addEventListener('click', () => {
+  const nextTheme = document.body.dataset.theme === 'light' ? 'dark' : 'light';
+  applyTheme(nextTheme);
+});
+
 // ===== FOOTER YEAR =====
 document.getElementById('year').textContent = new Date().getFullYear();
 
