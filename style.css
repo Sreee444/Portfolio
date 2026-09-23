@@ -63,18 +63,33 @@
 
 /* ===== LIGHT THEME ===== */
 [data-theme="light"] {
-  --bg:          #f5f0e8;
-  --bg-alt:      #ede8de;
-  --surface:     #e2dcd2;
-  --surface-alt: #d6cfc4;
-  --surface-3:   #ccc4b8;
-  --border:      #b5ac9f;
-  --border-light:#9c9288;
-  --text:        #1a1510;
-  --text-muted:  #5a4e42;
-  --text-faint:  #8a7e72;
-  --glass-bg:    rgba(235,228,216,0.9);
-  --glass-border:rgba(160,148,130,0.5);
+  --bg:            #f7f5f2;
+  --bg-alt:        #efecea;
+  --surface:       #ffffff;
+  --surface-alt:   #f3f1ef;
+  --surface-3:     #ebe8e5;
+  --border:        #dedad5;
+  --border-light:  #c8c3bc;
+
+  --text:          #160f08;
+  --text-muted:    #4a3f35;
+  --text-faint:    #9a8f82;
+
+  --red:           #d63820;
+  --red-dark:      #b52e18;
+  --gold:          #b8860b;
+  --gold-light:    #d4980e;
+  --gold-soft:     rgba(184,134,11,0.10);
+  --gold-glow:     rgba(184,134,11,0.22);
+  --red-soft:      rgba(214,56,32,0.08);
+  --red-glow:      rgba(214,56,32,0.22);
+
+  --grad-red:  linear-gradient(135deg, #d63820 0%, #b52e18 100%);
+  --grad-gold: linear-gradient(135deg, #d4980e 0%, #b8860b 100%);
+  --grad-hero: linear-gradient(135deg, #d63820 0%, #d4980e 100%);
+
+  --glass-bg:     rgba(255,255,255,0.92);
+  --glass-border: rgba(200,195,188,0.6);
 }
 
 /* ===== RESET ===== */
@@ -275,15 +290,19 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(20,18,16,0.92);
+  background: rgba(20,18,16,0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
   transition: box-shadow 0.3s;
 }
 
+[data-theme="light"] .site-header {
+  background: rgba(247,245,242,0.94);
+}
+
 .site-header.scrolled {
-  box-shadow: 0 4px 24px rgba(0,0,0,0.6);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
 }
 
 .header-inner {
@@ -1564,6 +1583,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     align-items: center;
     gap: 12px;
     z-index: 99;
+  }
+
+  [data-theme="light"] .main-nav {
+    background: rgba(247,245,242,0.97);
   }
 
   .main-nav.open { display: flex; }
