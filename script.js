@@ -201,3 +201,52 @@ projectCards.forEach(card => {
     this.style.transform = '';
   });
 });
+
+// ===== HERO TAGLINE CYCLING ANIMATION =====
+(function () {
+  const el = document.getElementById('heroTagline');
+  if (!el) return;
+
+  const sentences = [
+    'I build useful digital products for real people.',
+    'Final-year CSE student at SJCET, Palai, Kerala.',
+    'Full-stack apps — from idea to deployment.',
+    'Built a healthcare platform for ASHA workers in rural India.',
+    'React Native · Node.js · Supabase · MongoDB.',
+    'Top 3 at Smart India Hackathon 2025.',
+  ];
+
+  let current = 0;
+  const HOLD_MS  = 3000;   // how long sentence stays visible
+  const EXIT_MS  = 450;    // duration of exit animation
+  const ENTER_MS = 500;    // duration of enter animation
+  const GAP_MS   = 120;    // gap between exit and next enter
+
+  function showNext() {
+    // Exit current
+    el.classList.remove('tag-enter');
+    el.classList.add('tag-exit');
+
+    setTimeout(() => {
+      // Swap text
+      current = (current + 1) % sentences.length;
+      el.textContent = sentences[current];
+      el.classList.remove('tag-exit');
+
+      // Force reflow so animation restarts cleanly
+      void el.offsetWidth;
+
+      el.classList.add('tag-enter');
+
+      // Schedule next cycle after enter + hold
+      setTimeout(showNext, ENTER_MS + HOLD_MS);
+    }, EXIT_MS + GAP_MS);
+  }
+
+  // Initial display — wait for page reveal then start
+  setTimeout(() => {
+    el.textContent = sentences[0];
+    el.classList.add('tag-enter');
+    setTimeout(showNext, ENTER_MS + HOLD_MS);
+  }, 900);
+})();
